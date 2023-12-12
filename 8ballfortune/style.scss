@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+//color variables from adobe colors
+$color1: #ddd;
+$color2: #4523ad;
+$color4: #322b47;
+$bg-color: #202933;
+$hole1: #00e08f;
+$hole2: #3801e0;
+$hole3: #e0cc00;
+$hole4: #e02900;
+$text-color: #582cdb;
+
+body {
+	background-color: $bg-color;
+    width: 100vw;
+    height: 100vh;
+}
+.question{
+    color:$color1;
+    opacity: 50%;
+    z-index: 100;
+}
+p{
+    position: absolute;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.game-content{
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: monospace;
+    text-align: center;
+    font-size: 18px;
+    max-width: 60%;
+    overflow: hidden;
+}
+.ball{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: $color1;
+    z-index: 11;
+    border-radius: 50%;
+    transition: .2s;
+}
+main {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	width: 100vw;
+	height: 100vh;
+}
+.top, .bottom {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hole {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hole-1 {
+	background-color: $hole1;
+}
+.hole-2 {
+	background-color: $hole2;
+}
+.hole-3 {
+	background-color: $hole3;
+}
+.hole-4 {
+	background-color: $hole4;
+}
