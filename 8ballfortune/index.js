@@ -2,6 +2,7 @@ const API_URL =
 	"https://opentdb.com/api.php?amount=1&category=18&difficulty=easy&type=multiple";
 
 const gameContent = document.querySelector(".game-content");
+const qr = document.querySelector('.qr')
 const question = document.querySelector(".question");
 let ball = document.querySelector(".ball");
 const hole1 = document.querySelector(".hole-1");
@@ -19,6 +20,15 @@ let windowHeight = window.innerHeight;
 const holesArr = [hole1, hole2, hole3, hole4];
 let answerChoices = [];
 let correctAnswer = "";
+
+const detectDeviceType = () =>{
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    ? 'Mobile'
+    : 'Desktop';
+}
+if(detectDeviceType != 'Desktop'){
+	qr.style.display = 'flex'
+}
 
 ball.style.top = "0px";
 ball.style.left = "450px";
